@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM | SECEYCO</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+    <!-- Navbar principal -->
+    <nav class="navbar navbar-expand-lg navbar-light light-blue">
+        <div class="container-fluid">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+
+                <!-- Logo a la izquierda -->
+                <div class="logo">
+                    <img src="media/logo.png" alt="Logo SECEYCO" class="navbar-brand">
+                </div>
+
+                <!-- Buscador centrado -->
+                <div class="search-container d-flex justify-content-center flex-grow-1 mx-3">
+                    <form class="d-flex w-100" role="search">
+                        <div class="input-group w-100">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input class="form-control border-start-0 border-0" type="search"
+                                placeholder="Buscar proyectos o clientes..." aria-label="Buscar">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Menú de usuario a la derecha -->
+                <div class="d-flex align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-user user-icon"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                                <li><a class="dropdown-item" href="#">
+                                        Cerrar Sesión
+                                    </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Secundario | CRM -->
+    <nav class="navbar navbar-expand-lg navbar-light light-blue m-0 p-0">
+        <div class="container">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+                <!-- Inicio -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Oportunidades -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="oportunidades.html">
+                            Oportunidades
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevaOportunidad">
+                                    Nueva Oportunidad
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Tareas -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="/tareas">
+                            Tareas
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevaTarea">
+                                    Nueva Tarea
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Cuentas -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="cuentas.html">
+                            Cuentas
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevaCuenta">
+                                    Nueva Cuenta
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Contactos -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="/contactos">
+                            Contactos
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevoContacto">
+                                    Nuevo Contacto
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid py-4">
+        <!-- Header -->
+        <div class="header-section">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <div class="page-title">Oportunidad</div>
+                        <div class="opportunity-name">Test Opportunity</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-follow">
+                            <i class="fas fa-plus me-1"></i> Seguir
+                        </button>
+                        <button class="btn btn-action">
+                            <i class="fas fa-edit me-1"></i> Editar
+                        </button>
+                        <button class="btn btn-action">
+                            <i class="fas fa-sticky-note me-1"></i> Nueva Nota
+                        </button>
+                        <button class="btn btn-action">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Información principal -->
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-label">Cuenta</div>
+                        <div class="info-value">
+                            <i class="fas fa-building me-2 text-muted"></i>
+                            Test Account
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">Fecha de Cierre</div>
+                        <div class="info-value">
+                            <i class="fas fa-calendar me-2 text-muted"></i>
+                            25/11/2025
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">Cantidad</div>
+                        <div class="info-value">
+                            <i class="fas fa-dollar-sign me-2 text-muted"></i>
+                            $10,000.00
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">Propietario de Cuenta</div>
+                        <div class="owner-badge">
+                            <div class="owner-avatar">CA</div>
+                            Christian Aguilera
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pipeline de etapas -->
+        <div class="container">
+            <div class="pipeline-section">
+                <div class="pipeline-header">
+                    <h3 class="pipeline-title">Pipeline</h3>
+                </div>
+                <div class="pipeline-stages d-flex justify-content-between">
+                    <!-- Qualification -->
+                    <div class="stage completed">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">1</div>
+                        <div class="stage-label">Calificación</div>
+                    </div>
+
+                    <!-- Needs Analysis -->
+                    <div class="stage completed">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">2</div>
+                        <div class="stage-label">Análisis de Necesidades</div>
+                    </div>
+
+                    <!-- Value Proposition -->
+                    <div class="stage completed">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">3</div>
+                        <div class="stage-label">Propuesta de Valor</div>
+                    </div>
+
+                    <!-- Id. Decision Makers -->
+                    <div class="stage completed">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">4</div>
+                        <div class="stage-label">Id. Decisiones</div>
+                    </div>
+
+                    <!-- Perception Analysis -->
+                    <div class="stage completed">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">5</div>
+                        <div class="stage-label">Análisis de Percepción</div>
+                    </div>
+
+                    <!-- Proposal/Price Quote -->
+                    <div class="stage active">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">6</div>
+                        <div class="stage-label">Propuesta/Cotización</div>
+                        <div class="stage-action">
+                            <button class="btn btn-mark-complete">
+                                Marcar Etapa como Completa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Negotiation/Review -->
+                    <div class="stage">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">7</div>
+                        <div class="stage-label">Negociación/Revisión</div>
+                    </div>
+
+                    <!-- Closed -->
+                    <div class="stage">
+                        <div class="stage-connector"></div>
+                        <div class="stage-circle">8</div>
+                        <div class="stage-label">Cerrada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-lg-8">
+                    <!-- Sección de Activity -->
+                    <div class="activity-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Actividad</h2>
+                            <h3 class="section-subtitle">Detalles</h3>
+                        </div>
+
+                        <div class="section-body">
+                            <!-- Botones de actividad -->
+                            <div class="activity-buttons">
+                                <button class="btn-activity">
+                                    <i class="fas fa-phone"></i>
+                                    Registrar Llamada
+                                </button>
+                                <button class="btn-activity">
+                                    <i class="fas fa-tasks"></i>
+                                    Nueva Tarea
+                                </button>
+                                <button class="btn-activity">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Nuevo Evento
+                                </button>
+                                <button class="btn-activity">
+                                    <i class="fas fa-envelope"></i>
+                                    Email
+                                </button>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <!-- Upcoming & Omnibus -->
+                            <h4 class="mb-3">Próximas y vencidas</h4>
+
+                            <!-- Actividad upcoming -->
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="activity-title">Reunión</div>
+                                        <div class="activity-time">Mañana 10 A.M</div>
+                                    </div>
+                                    <div class="activity-description">Tienes un evento próximo</div>
+                                </div>
+                            </div>
+
+                            <!-- Header de mes -->
+                            <div class="month-header">
+                                Noviembre - 2025
+                            </div>
+
+                            <!-- Actividad pasada -->
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Llamada</div>
+                                    <div class="activity-description">Has registrado una llamada</div>
+                                </div>
+                            </div>
+
+                            <!-- No más actividades -->
+                            <div class="no-activities">
+                                No hay más actividades pasadas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <!-- Sección Related -->
+                    <div class="activity-section">
+                        <div class="section-header">
+                            <h2 class="section-title">Relacionado</h2>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="related-items">
+                                <!-- Notes & Attachments -->
+                                <div class="related-item">
+                                    <div class="related-item-main">
+                                        <i class="fas fa-sticky-note text-muted"></i>
+                                        <span>Notas & Adjuntos</span>
+                                    </div>
+                                    <span class="related-count">0</span>
+                                </div>
+
+                                <!-- Upload Files -->
+                                <div class="upload-area">
+                                    <div class="upload-icon">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </div>
+                                    <div class="fw-bold mb-2">Cargar Archivos</div>
+                                    <div class="text-muted small">O arrastralos aqui</div>
+                                </div>
+
+                                <!-- Contact Roles -->
+                                <div class="related-item">
+                                    <div class="related-item-main">
+                                        <i class="fas fa-users text-muted"></i>
+                                        <span>Contactos</span>
+                                    </div>
+                                    <span class="related-count">0</span>
+                                </div>
+
+                                <!-- Partners -->
+                                <div class="related-item">
+                                    <div class="related-item-main">
+                                        <i class="fas fa-handshake text-muted"></i>
+                                        <span>Partners</span>
+                                    </div>
+                                    <span class="related-count">0</span>
+                                </div>
+
+                                <!-- Stage History -->
+                                <div class="related-item">
+                                    <div class="related-item-main">
+                                        <i class="fas fa-history text-muted"></i>
+                                        <span>Historial</span>
+                                    </div>
+                                    <span class="related-count">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
