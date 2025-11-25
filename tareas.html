@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM | SECEYCO</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="bg-light">
+    <!-- Navbar principal -->
+    <nav class="navbar navbar-expand-lg navbar-light light-blue">
+        <div class="container-fluid">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+
+                <!-- Logo a la izquierda -->
+                <div class="logo">
+                    <img src="media/logo.png" alt="Logo SECEYCO" class="navbar-brand">
+                </div>
+
+                <!-- Buscador centrado -->
+                <div class="search-container d-flex justify-content-center flex-grow-1 mx-3">
+                    <form class="d-flex w-100" role="search">
+                        <div class="input-group w-100">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input class="form-control border-start-0 border-0" type="search"
+                                placeholder="Buscar proyectos o clientes..." aria-label="Buscar">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Menú de usuario a la derecha -->
+                <div class="d-flex align-items-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-user user-icon"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                                <li><a class="dropdown-item" href="#">
+                                        Cerrar Sesión
+                                    </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Secundario | CRM -->
+    <nav class="navbar navbar-expand-lg navbar-light light-blue m-0 p-0">
+        <div class="container">
+            <div class="d-flex w-100 align-items-center justify-content-between">
+                <!-- Inicio -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Oportunidades -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="oportunidades.html">
+                            Oportunidades
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevaOportunidad">
+                                    Nueva Oportunidad
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Tareas -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="tareas.html">
+                            Tareas
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevaTarea">
+                                    Nueva Tarea
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Cuentas -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="cuentas.html">
+                            Cuentas
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevaCuenta">
+                                    Nueva Cuenta
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Contactos -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link module-link" href="/contactos">
+                            Contactos
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevoContacto">
+                                    Nuevo Contacto
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link module-link">
+                            Cotizaciones
+                        </a>
+                        <button class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/nuevaCotización">
+                                    Nueva Cotización
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container custom-page-content pt-3">
+        <div class="row custom-full-height-row">
+            <div class="col-md-4 custom-col-left">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="section-title m-0 p-0">Tareas Recientes</h2>
+                    <button class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Nuevo</button>
+                </div>
+
+                <div class="input-group mb-4 custom-search-bar">
+                    <span class="input-group-text custom-search-icon" id="basic-addon1"><i
+                            class="fas fa-search"></i></span>
+                    <input type="text" class="form-control border-start-0 border-0" placeholder="Buscar tareas..."
+                        aria-label="Buscar tareas...">
+                </div>
+
+                <div class="task-list">
+                    <div class="card mb-3 custom-task-card active">
+                        <div class="card-body">
+                            <p class="task-title">Llamada</p>
+                            <div class="task-details d-flex justify-content-between">
+                                <span class="task-opportunity">Test Opportunity 1</span>
+                                <span class="task-date">25/11/25</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 custom-task-card">
+                        <div class="card-body">
+                            <p class="task-title">Llamada</p>
+                            <div class="task-details d-flex justify-content-between">
+                                <span class="task-opportunity">Test Opportunity 2</span>
+                                <span class="task-date">25/11/25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 custom-col-right p-0">
+                <div class="task-detail-header-bar d-flex justify-content-between align-items-center p-3">
+                    <div class="d-flex align-items-center">
+                        <span class="task-opportunity-detail-title">Test Opportunity 1</span>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-success btn-sm custom-completed-btn me-2"><i
+                                class="fas fa-check me-2"></i>
+                            Completada</button>
+                        <button class="btn btn-sm btn-outline-secondary me-2 btn-custom">Cambiar Fecha</button>
+                        <button class="btn btn-sm btn-outline-secondary btn-custom">Editar Comentarios</button>
+                    </div>
+
+                </div>
+                <div class="container-fluid mb-4 p-0 custom-related-table-container">
+                    <table class="table custom-related-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Relacionado a</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="contacto1.html">Contacto 1</a></td>
+                                <td><a href="test-opportunity1.html">Test Opportunity 1</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="task-detail-content-area bg-white">
+                    <ul class="nav nav-tabs task-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="details-tab" data-bs-toggle="tab"
+                                data-bs-target="#details-content" type="button" role="tab"
+                                aria-controls="details-content" aria-selected="true">Detalles</button>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="tab-content task-detail-tabs-content" id="myTabContent">
+                    <div class="tab-pane fade show active p-4" id="details-content" role="tabpanel"
+                        aria-labelledby="details-tab">
+
+
+
+                        <div class="row detail-fields">
+
+                            <div class="col-md-6">
+                                <div class="detail-field">
+                                    <label>Asignado a</label>
+                                    <p class="editable-content"><a href="#">Christian Aguilera</a> <i
+                                            class="bi bi-pencil-square edit-icon"></i></p>
+                                </div>
+                                <div class="detail-field">
+                                    <label>Asunto</label>
+                                    <p class="editable-content">Llamada <i class="bi bi-pencil-square edit-icon"></i>
+                                    </p>
+                                </div>
+                                <div class="detail-field">
+                                    <label>Fecha de Vencimiento</label>
+                                    <p class="editable-content">24/11/2025 <i class="bi bi-pencil-square edit-icon"></i>
+                                    </p>
+                                </div>
+                                <div class="detail-field">
+                                    <label>Prioridad</label>
+                                    <p class="editable-content">Normal <i class="bi bi-pencil-square edit-icon"></i>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="detail-field">
+                                    <label>Estatus</label>
+                                    <p class="editable-content">Completado <i class="bi bi-pencil-square edit-icon"></i>
+                                    </p>
+                                </div>
+                                <div class="detail-field">
+                                    <label>Nombre</label>
+                                    <p class="editable-content">Contacto 1<i class="bi bi-pencil-square edit-icon"></i>
+                                    </p>
+                                </div>
+                                <div class="detail-field">
+                                    <label>Relacionado a</label>
+                                    <p class="editable-content"><a href="test-opportunity1.html">Test Opportunity
+                                            1</a>
+                                        <i class="bi bi-pencil-square edit-icon"></i>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div class="col-md-6">
+                                <div class="detail-field created-modified">
+                                    <label>Creado Por</label>
+                                    <div class="d-flex">
+                                        <p class="editable-content"><a href="#"><i
+                                                    class="bi bi-person-circle profile-icon"></i> Christian
+                                                Aguilera</a>,
+                                            24/11/2025, 10:20</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-field created-modified">
+                                    <label>Ultima Modificación Por</label>
+                                    <div class="d-flex">
+                                        <p class="editable-content"><a href="#"><i
+                                                    class="bi bi-person-circle profile-icon"></i> Christian
+                                                Aguilera</a>,
+                                            24/11/2025, 10:20</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <div class="detail-field">
+                                    <label>Comentarios</label>
+                                    <p class="editable-content">Test Comentarios<i
+                                            class="bi bi-pencil-square edit-icon"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

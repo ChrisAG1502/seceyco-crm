@@ -101,7 +101,6 @@ input:focus {
     color: var(--dark-blue);
     font-weight: 700;
     font-size: 1.25rem;
-    margin-bottom: 1rem;
 }
 
 .section-subtitle {
@@ -714,3 +713,160 @@ tbody a {
     color: #198754;
     font-weight: 600;
 }
+
+/*
+    Main taskes
+*/
+
+
+.task-list {
+    flex-grow: 1; /* Permite que la lista de tareas ocupe el espacio restante */
+    overflow-y: auto; /* Scroll si hay muchas tareas */
+}
+
+.custom-task-card {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.custom-task-card.active {
+    border: 2px solid var(--primary-blue);
+}
+
+.task-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.task-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* --- Estilos de la Columna Derecha (Detalle de Tarea) --- */
+.custom-col-right {
+    background-color: #343a40; /* Gris muy oscuro/negro para el detalle */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Encabezado del Detalle */
+.task-detail-header {
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.task-opportunity-detail-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Contenido Principal del Detalle */
+.task-detail-content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.btn-custom{
+    border-style: solid;
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-custom:hover{
+    border-style: solid;
+    border-color: var(--primary-blue);
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+}
+
+.custom-table th{
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+/* Detalles de tarea*/
+/* --- Estilos para la Columna Derecha (Detalle) --- */
+
+/* La columna derecha ya no tiene el fondo gris oscuro global */
+.custom-col-right {
+    background-color: white; /* Cambiamos el fondo a blanco */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de las Pestañas de Navegación */
+.task-tabs .nav-link {
+    color: #495057; /* Texto gris por defecto */
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+}
+
+.task-tabs .nav-link.active {
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+    background-color: transparent;
+}
+
+.task-detail-tabs-content {
+    flex-grow: 1;
+    background-color: white; /* Fondo del contenido de la pestaña */
+    overflow-y: auto; /* Permite scroll si el contenido es muy largo */
+}
+
+/* Estilos de los Campos de Detalle */
+.detail-field {
+    margin-bottom: 1.5rem;
+}
+
+.detail-field label {
+    display: block;
+    color: #6c757d; /* Gris para la etiqueta */
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+}
+
+.editable-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6; /* Línea separadora debajo del valor */
+    padding-bottom: 0.2rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #343a40; /* Texto oscuro para el valor */
+}
+
+.editable-content a {
+    text-decoration: none;
+    color: var(--primary-blue); /* Azul para enlaces */
+}
+
+.edit-icon {
+    color: #6c757d; /* Ícono de lápiz gris */
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Estilos específicos para Created By / Last Modified By */
+.created-modified .editable-content {
+    border-bottom: none; /* Sin línea debajo */
+    padding-bottom: 0;
+}
+
+.profile-icon {
+    color: #007bff; /* Ícono de perfil azul */
+    margin-right: 5px;
+}
+
+    
