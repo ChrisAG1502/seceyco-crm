@@ -80,7 +80,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
-                            <li><a class="dropdown-item" href="/nuevaOportunidad">
+                            <li><a class="dropdown-item" data-bs-target="#newOpportunityModal" data-bs-toggle="modal">
                                     Nueva Oportunidad
                                 </a></li>
                         </ul>
@@ -138,7 +138,7 @@
                     </li>
                 </ul>
                 <!-- Cotizaciones -->
-                 <ul class="navbar-nav">
+                <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a href="" class="nav-link module-link">
                             Cotizaciones
@@ -147,9 +147,9 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
-                            <li><a  class="dropdown-item" href="/nuevaCotización">
-                                Nueva Cotización
-                            </a></li>
+                            <li><a class="dropdown-item" href="/nuevaCotización">
+                                    Nueva Cotización
+                                </a></li>
                         </ul>
                     </li>
                 </ul>
@@ -171,10 +171,10 @@
                 <!-- Barra de búsqueda -->
                 <div class="search-container">
                     <div class="button pb-3 d-flex justify-content-end">
-                        <button class="btn btn-nuevo">
-                        <i class="fas fa-plus me-2"></i>Nuevo
-                    </button>
-                    </div>      
+                        <button class="btn btn-nuevo" data-bs-toggle="modal" data-bs-target="#newOpportunityModal">
+                            <i class="fas fa-plus me-2"></i>Nuevo
+                        </button>
+                    </div>
                     <div class="search-box">
                         <div class="input-group">
                             <span class="input-group-text bg-white border-end-0">
@@ -218,7 +218,145 @@
             </table>
         </div>
     </div>
+    <!-- Nueva Oportunindad (Modal) -->
+    <!-- Modal para Nueva Oportunidad -->
+    <div class="modal fade" id="newOpportunityModal" tabindex="-1" aria-labelledby="newOpportunityModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newOpportunityModalLabel">Nueva Oportunidad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-end mb-3">
+                        <span class="required-info">* = Información Requerida</span>
+                    </div>
+
+                    <h6 class="opportunity-section-title">Información de la Oportunidad</h6>
+
+                    <form>
+                        <div class="row g-3">
+                            <!-- Columna Izquierda -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Propietario de la Oportunidad</label>
+                                    <div class="d-flex align-items-center bg-light p-2 rounded-3">
+                                        <i class="fa-regular fa-user me-2 text-primary"></i>
+                                        <span>Christian Aguilera</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="privateCheckbox">
+                                        <label class="form-check-label" for="privateCheckbox">
+                                            Privado
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="opportunityName" class="form-label">* Nombre de la Oportunidad</label>
+                                    <input type="text" class="form-control" id="opportunityName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="accountName" class="form-label">Nombre de la Cuenta</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Buscar Cuentas..."
+                                            id="accountName">
+                                        <span class="input-group-text search-icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="type" class="form-label">Tipo</label>
+                                    <select class="form-select" id="type">
+                                        <option>Nuevo Negocio</option>
+                                        <option>Expansión</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="leadSource" class="form-label">Fuente de Lead</label>
+                                    <select class="form-select" id="leadSource">
+                                        <option>Web</option>
+                                        <option>Referencia</option>
+                                        <option>Socio</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Columna Derecha -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="amount" class="form-label">Monto</label>
+                                    <input type="number" class="form-control" id="amount" placeholder="0.00">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="closeDate" class="form-label">* Fecha de Cierre</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="closeDate" placeholder="dd/mm/yyyy"
+                                            required>
+                                        <span class="input-group-text date-icon"
+                                            onclick="document.getElementById('closeDate').focus()">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="nextStep" class="form-label">Siguiente Paso</label>
+                                    <input type="text" class="form-control" id="nextStep">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="stage" class="form-label">* Etapa</label>
+                                    <select class="form-select" id="stage" required>
+                                        <option>Prospección</option>
+                                        <option>Calificación</option>
+                                        <option>Propuesta</option>
+                                        <option>Cerrada (Ganada)</option>
+                                        <option>Cerrada (Perdida)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="probability" class="form-label">Probabilidad (%)</label>
+                                    <input type="number" class="form-control" id="probability" min="0" max="100">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="primaryCampaignSource" class="form-label">Fuente de Campaña
+                                        Primaria</label>
+                                    <input type="text" class="form-control" id="primaryCampaignSource">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <button type="button" class="btn btn-danger rounded-3" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-custom rounded-3">Guardar y Nuevo</button>
+                    <button type="submit" class="btn btn-custom rounded-3">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función de simulación de backoff
+        async function fetchWithExponentialBackoff(apiUrl, payload, retries = 5, delay = 1000) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(apiUrl, payload);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return await response.json();
+                } catch (error) {
+                    if (i === retries - 1) {
+                        console.error("API call failed after multiple retries:", error);
+                        throw error;
+                    }
+                    // Implementación del retardo exponencial
+                    await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, i)));
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
